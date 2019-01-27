@@ -1,10 +1,6 @@
 #!/bin/bash -x
 
-rm -f /etc/yum.repos.d/*updates*
-rm -f /etc/yum.repos.d/*testing*
-rm -f /etc/yum.repos.d/*modular*
-
-dnf install -v -y \
+dnf install -y \
 	procps \
 	gcc \
 	vim \
