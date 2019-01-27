@@ -1,5 +1,6 @@
 FROM fedora
 USER root
-COPY image-prep.sh .
+WORKDIR /root
+COPY image-prep.sh requirements.txt .
 RUN ./image-prep.sh
 
