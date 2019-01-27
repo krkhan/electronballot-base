@@ -1,0 +1,32 @@
+#!/bin/bash -x
+
+rm -f /etc/yum.repos.d/*updates*
+rm -f /etc/yum.repos.d/*testing*
+rm -f /etc/yum.repos.d/*modular*
+
+dnf install -v -y \
+	procps \
+	gcc \
+	vim \
+	sudo \
+	bind-utils \
+	nc \
+	iproute \
+	git \
+	php \
+	php-mbstring \
+	python-pip \
+	redhat-rpm-config \
+	python-devel \
+	zlib-devel \
+	libjpeg-devel \
+	php-json
+
+pip install --upgrade pip setuptools
+pip install -r requirements.txt
+
+git clone https://github.com/bastianraschke/pyfingerprint.git
+(cd pyfingerprint/src; pip install .)
+
+git clone https://github.com/mike42/escpos-php.git
+
