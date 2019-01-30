@@ -17,7 +17,7 @@ dnf install -y \
 	zlib-devel \
 	libjpeg-devel \
 	php-json \
-	Imagemagick-devel
+	ImageMagick-devel
 
 pip install --upgrade pip setuptools
 pip install -r requirements.txt
