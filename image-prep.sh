@@ -20,7 +20,6 @@ dnf install -y \
 
 pip install --upgrade pip setuptools
 pip install -r requirements.txt
-pip install cryptography
 
 git clone https://github.com/bastianraschke/pyfingerprint.git
 (cd pyfingerprint/src; pip install .)
