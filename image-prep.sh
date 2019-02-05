@@ -16,6 +16,7 @@ dnf install -y \
 	python-devel \
 	zlib-devel \
 	libjpeg-devel \
+	libffi-devel \
 	php-json \
 	ImageMagick-devel
 
