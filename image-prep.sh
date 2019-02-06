@@ -16,12 +16,16 @@ dnf install -y \
 	python-devel \
 	zlib-devel \
 	libjpeg-devel \
+	openssl-devel \
 	libffi-devel \
 	php-json \
 	ImageMagick-devel
 
 pip install --upgrade pip setuptools
-pip install -r requirements.txt
+
+while [ "$?" -ne "0" ]; do
+	pip install -r requirements.txt
+done
 
 git clone https://github.com/bastianraschke/pyfingerprint.git
 (cd pyfingerprint/src; pip install .)
