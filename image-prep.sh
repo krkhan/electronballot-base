@@ -16,6 +16,7 @@ dnf install -y \
 	python-devel \
 	zlib-devel \
 	libjpeg-devel \
+	openssl-devel \
 	libffi-devel \
 	openssl-devel \
 	php-json \
