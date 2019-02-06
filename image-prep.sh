@@ -18,10 +18,15 @@ dnf install -y \
 	libjpeg-devel \
 	openssl-devel \
 	libffi-devel \
+	openssl-devel \
 	php-json \
 	ImageMagick-devel
 
 pip install --upgrade pip setuptools
+
+while [ "$?" -ne "0" ]; do
+	pip install -r requirements.txt
+done
 
 while [ "$?" -ne "0" ]; do
 	pip install -r requirements.txt
