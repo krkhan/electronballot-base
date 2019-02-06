@@ -22,8 +22,11 @@ dnf install -y \
 	ImageMagick-devel
 
 pip install --upgrade pip setuptools
-pip install -r requirements.txt
+while [ "$?" -ne "0" ]; do
+	pip install --upgrade pip setuptools
+done
 
+pip install -r requirements.txt
 while [ "$?" -ne "0" ]; do
 	pip install -r requirements.txt
 done
