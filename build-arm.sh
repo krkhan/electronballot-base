@@ -1,4 +1,4 @@
 #!/bin/sh
 
-docker build --build-arg ARCH=arm -t krkhan/electronballot-base:arm .
+docker build --build-arg BASEIMAGE=arm32v7/fedora -t krkhan/electronballot-base:arm .
 
